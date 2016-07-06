@@ -1,0 +1,17 @@
+<h1>Here are the places you've been:</h1>
+
+<ul>
+  <% @places.each() do |instance| %>
+    <li><%= instance.name() %></li>
+  <% end %>
+</ul>
+<br>
+<h3>Add a place you've been to!</h3>
+
+<form action="/places" method="Post">
+  <div class="form-group">
+    <label for="place">Name of place</label>
+    <input id="place" name="place" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn-success">Add Place</button>
+</form>
